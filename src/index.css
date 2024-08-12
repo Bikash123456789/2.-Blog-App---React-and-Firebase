@@ -1,13 +1,56 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(255, 255, 255);
+  font-family: "Courier New", Courier, monospacefdas;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input {
+  font-family: "Courier New", Courier, monospace;
+  height: 0.5rem;
+  width: 40%;
+  margin: 1rem;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(248, 255, 240);
+  width: 60%;
+  height: 40%;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.textarea {
+  height: 80%;
+  width: 70%;
+  padding: 1.7rem 2rem;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgb(255, 223, 221);
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
 }

@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
 
 function App() {
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+
+  function submitHandler(e) {
+    e.preventDefault();
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Write a Blog!!!</h1>
+      <div className="section">
+        <form onSubmit={submitHandler}>
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Enter your title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <textarea
+            type="text"
+            name=""
+            id=""
+            className="textarea"
+            placeholder="Enter your content"
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+          />
+          <button className="btn">Add</button>
+        </form>
+      </div>
+      <hr />
+      <h2>Blogs</h2>
+      <h3>{title}</h3>
+      <p>{content}</p>
     </div>
   );
 }
