@@ -59,13 +59,14 @@ form {
   width: 100vw;
 }
 
-.btn {
+.addbtn {
   padding: 0.5rem 1rem;
   font-family: "Courier New", Courier, monospace;
-  background-color: rgb(255, 223, 221);
+  background-color: rgb(103, 144, 67);
   border: none;
   cursor: pointer;
   margin-top: 1rem;
+  color: white;
 }
 
 .blog {
@@ -77,4 +78,13 @@ form {
   flex-direction: column;
   margin: 1rem;
   padding: 1rem;
+}
+
+.removeBtn {
+  padding: 0.5rem 1rem;
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgb(255, 223, 221);
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
 }
