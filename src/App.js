@@ -3,9 +3,11 @@ import { useState } from "react";
 function App() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [blogs, setBlogs] = useState([]);
 
   function submitHandler(e) {
     e.preventDefault();
+    setBlogs([{ title, content }, ...blogs]);
   }
 
   return (
@@ -33,10 +35,16 @@ function App() {
           <button className="btn">Add</button>
         </form>
       </div>
-      <hr />
+
       <h2>Blogs</h2>
-      <h3>{title}</h3>
-      <p>{content}</p>
+      {blogs.map((blog, index) => {
+        return (
+          <div className="blog" key={index}>
+            <h2>{blog.title}</h2>
+            <p>{blog.content}</p>
+          </div>
+        );
+      })}
     </div>
   );
 }
